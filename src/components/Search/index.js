@@ -13,7 +13,6 @@ export default function Search() {
       if (query.length >= 3) {
         const response = await api.get(`${query}`);
         setItems(response.data.items);
-        console.log(response.data.items);
         setIsLoading(false);
       } else if (query.length === 0) {
         setIsLoading(false);
@@ -46,9 +45,11 @@ export default function Search() {
             <Items key={item.map.id}>
               <a
                 target="_blank"
+                rel="noreferrer"
                 href={`https://store.omelete.com.br${item.map.uri}`}
               >
                 <img
+                  alt=""
                   src={`https://static-store.worldticket.com.br/${item.map["images.url"][0]}`}
                 />
                 <div>
