@@ -36,21 +36,11 @@ export default function Search() {
       />
 
       {isLoading ? (
-        <Products
-          background={query.length === 0 ? "transparent" : "#fff"}
-          shadow={
-            query.length === 0 ? "none" : "0 1px 2px 0 rgba(0, 0, 0, 0.2)"
-          }
-        >
+        <Products display={query.length === 0 ? "none" : "block"}>
           <Items>Buscando por produtos...</Items>
         </Products>
       ) : (
-        <Products
-          background={query.length === 0 ? "transparent" : "#fff"}
-          shadow={
-            query.length === 0 ? "none" : "0 1px 2px 0 rgba(0, 0, 0, 0.2)"
-          }
-        >
+        <Products show={query.length === 0 ? "none" : "block"}>
           {items.map((item) => (
             <Items key={item.map.id}>
               <a

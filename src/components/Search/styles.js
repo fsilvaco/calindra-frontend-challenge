@@ -22,12 +22,12 @@ export const Input = styled.input`
 `;
 
 export const Products = styled.ul`
-  background-color: ${(props) => props.background};
+  background-color: #fff;
   border-top: solid 1px #e6e6e6;
   position: absolute;
   width: 100%;
-  display: block;
-  box-shadow: ${(props) => props.shadow};
+  display: ${(props) => props.show};
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   padding: 5px;
 `;
 
